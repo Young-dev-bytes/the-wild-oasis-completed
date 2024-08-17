@@ -16,11 +16,14 @@ export async function getCabins() {
 export async function createEditCabin(newCabin, id) {
   //https://jqeypqtmrfhfuxnwrqng.supabase.co/storage/v1/object/public/cabin-images/cabin-002.jpg
   console.log("newCabin", newCabin, "id", id);
+  console.log(newCabin.image?.startsWith);
   const hasImagePath = newCabin.image?.startsWith?.(supabaseUrl);
   console.log("hasImagePath", hasImagePath);
+
   const imageName = `${Math.floor(Math.random() * 9000) + 1000}-${
     newCabin.image.name
   }`.replaceAll("/", "");
+  console.log("imageName", imageName);
   const imagePath = hasImagePath
     ? newCabin.image
     : `${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`;
