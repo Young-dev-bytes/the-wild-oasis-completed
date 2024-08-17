@@ -13,6 +13,7 @@ import Account from "./pages/Account";
 import Cabins from "./pages/Cabins";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
+import Test from "./pages/Test";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -42,6 +43,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
+          <Route path="test" element={<Test />} />
         </Routes>
       </BrowserRouter>
       <Toaster
