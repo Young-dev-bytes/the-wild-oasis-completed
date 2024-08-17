@@ -8,4 +8,5 @@
 - npm i @tanstack/react-query@4
 - npm i @tanstack/react-query-devtools@4
 - npm i date-fns@2
-- 5. Mutations Deleting a Cabin.mp4
+- npm install react-hot-toast
+- npm install react-hook-form
