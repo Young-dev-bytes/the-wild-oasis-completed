@@ -13,13 +13,15 @@ import Account from "./pages/Account";
 import Cabins from "./pages/Cabins";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
-import Test from "./pages/Test";
+import TestHOC from "./pages/TestHOC";
+import TestRenderProps from "./pages/TestRenderProps";
+import TestCounter from "./pages/TestCounter";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       // staleTime: 60 * 1000,
-      staleTime: 60 * 1000,
+      staleTime: 60 * 10000,
     },
   },
 });
@@ -43,7 +45,9 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
-          <Route path="test" element={<Test />} />
+          <Route path="testhoc" element={<TestHOC />} />
+          <Route path="testrenderprops" element={<TestRenderProps />} />
+          <Route path="testcounter" element={<TestCounter />} />
         </Routes>
       </BrowserRouter>
       <Toaster

@@ -75,7 +75,7 @@ function List({ title, items, render }) {
   );
 }
 
-export default function Test() {
+export default function TestRenderProps() {
   console.log("products", products);
   console.log("companies", companies);
 
@@ -84,18 +84,29 @@ export default function Test() {
       <h1>Render Props Demo</h1>
 
       <div className="col-2">
-        <List
+        {/* <List
           title="Products"
           items={products}
           render={(product) => (
             <ProductItem key={product.productName} product={product} />
           )}
+        /> */}
+        <List
+          title="Products"
+          items={products}
+          render={function (product) {
+            return <ProductItem key={product.productName} product={product} />;
+          }}
         />
         <List
           title="Companies"
           items={companies}
           render={(company) => (
-            <CompanyItem key={company.companyName} company={company} />
+            <CompanyItem
+              key={company.companyName}
+              company={company}
+              defaultVisibility={false}
+            />
           )}
         />
       </div>
