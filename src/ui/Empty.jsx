@@ -1,5 +1,6 @@
-function Empty({ resource }) {
-  return <p>No {resource} could be found.</p>;
+function Empty({ ...props }) {
+  const { resourceName } = props;
+  return <p>No {resourceName} could be found.</p>;
 }
 
 export default Empty;
