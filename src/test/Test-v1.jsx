@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { faker } from "@faker-js/faker";
 import "./Test.css";
-import useCustomState from "./useCustomState";
+import useCustomState from "../pages/useCustomState";
 
 const products = Array.from({ length: 20 }, () => {
   return {

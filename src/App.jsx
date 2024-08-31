@@ -13,9 +13,9 @@ import Account from "./pages/Account";
 import Cabins from "./pages/Cabins";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
-import TestHOC from "./pages/TestHOC";
-import TestRenderProps from "./pages/TestRenderProps";
-import TestCounter from "./pages/TestCounter";
+import TestHOC from "./test/TestHOC";
+import TestRenderProps from "./test/TestRenderProps";
+import TestCounter from "./test/TestCounter";
 
 const queryClient = new QueryClient({
   defaultOptions: {
