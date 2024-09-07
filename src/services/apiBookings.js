@@ -1,5 +1,6 @@
 import { PAGE_SIZE } from "../utils/constants";
 import { getToday } from "../utils/helpers";
+
 import supabase from "./supabase";
 
 export async function getBookings({ filter, sortBy, page }) {
@@ -21,6 +22,7 @@ export async function getBookings({ filter, sortBy, page }) {
   if (page) {
     const from = (page - 1) * PAGE_SIZE;
     const to = from + PAGE_SIZE - 1;
+    console.log(from, to);
     query = query.range(from, to);
   }
   const { data, error, count } = await query;
@@ -123,5 +125,6 @@ export async function deleteBooking(id) {
     console.error(error);
     throw new Error("Booking could not be deleted");
   }
+  console.log(data);
   return data;
 }

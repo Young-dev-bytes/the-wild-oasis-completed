@@ -47,6 +47,7 @@ function Filter({ ...props }) {
           active={currentFilter === option.value ? "true" : undefined}
           onClick={() => {
             searchParams.set(filterField, option.value);
+            if (searchParams.get("page")) searchParams.set("page", 1);
             setSearchParams(searchParams);
           }}
         >
