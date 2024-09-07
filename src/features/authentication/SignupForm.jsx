@@ -9,15 +9,14 @@ import { useSignup } from "./useSignup";
 
 function SignupForm() {
   const { signup, isLoading } = useSignup();
-  const { register, formState, getValues, handleSubmit } = useForm();
+  const { register, formState, getValues, handleSubmit, reset } = useForm();
   const { errors } = formState;
   console.log("errors", errors);
-  const onSubmit = (data) => {
-    console.log(data);
-    console.log({ ...data });
-    signup(data);
+  const onSubmit = ({ fullName, email, password }) => {
+    signup({ fullName, email, password }, { onSettled: reset });
   };
   return (
+    // register the func onSubmit
     <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow label="Full name" error={errors?.fullName?.message}>
         <Input
@@ -79,7 +78,7 @@ function SignupForm() {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button variation="secondary" type="reset">
+        <Button variation="secondary" type="reset" disabled={isLoading}>
           Cancel
         </Button>
         <Button disabled={isLoading}>Create new user</Button>
