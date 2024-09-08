@@ -8,7 +8,14 @@ const StyledDashboardLayout = styled.div`
 `;
 
 function DashboardLayout() {
-  return <StyledDashboardLayout>123</StyledDashboardLayout>;
+  return (
+    <StyledDashboardLayout>
+      <div>test</div>
+      <div>test</div>
+      <div>test</div>
+      <div>test</div>
+    </StyledDashboardLayout>
+  );
 }
 
 export default DashboardLayout;
