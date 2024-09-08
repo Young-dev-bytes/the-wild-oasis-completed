@@ -9,7 +9,7 @@ import {
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
-import useOutsideClick from "../hooks/useOutSideClick";
+import { useOutsideClick } from "../hooks/useOutSideClick";
 
 const StyledModal = styled.div`
   position: fixed;
