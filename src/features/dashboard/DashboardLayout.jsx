@@ -10,10 +10,10 @@ const StyledDashboardLayout = styled.div`
 function DashboardLayout() {
   return (
     <StyledDashboardLayout>
-      <div>test</div>
-      <div>test</div>
-      <div>test</div>
-      <div>test</div>
+      <div>test forward</div>
+      <div>test forward</div>
+      <div>test forward</div>
+      <div>test forward</div>
     </StyledDashboardLayout>
   );
 }
