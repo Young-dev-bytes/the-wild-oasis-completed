@@ -20,6 +20,7 @@ import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
 import TestCounter from "./test/TestCounter";
 import ProtectedRoute from "./ui/ProtectedRoute";
+import TopNotice from "./ui/TopNotice";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,6 +42,7 @@ function App() {
             <Route
               element={
                 <ProtectedRoute>
+                  <TopNotice />
                   <AppLayout />
                 </ProtectedRoute>
               }
