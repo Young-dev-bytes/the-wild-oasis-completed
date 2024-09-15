@@ -41,21 +41,22 @@ const NoActivity = styled.p`
 
 function TodayActivity() {
   const { isLoading, activities } = useTodayActivity();
+  console.log(isLoading, activities);
   return (
     <StyledToday>
       <Row type="horizontal">
         <Heading as="h2">Today</Heading>
       </Row>
       {!isLoading ? (
-        activities?.length > 0 ? (
-          <TodayActivity>
-            {activities.map((activity) => (
+        <TodayList>
+          {activities?.length > 0 ? (
+            activities.map((activity) => (
               <TodayItem activity={activity} key={activity.id} />
-            ))}
-          </TodayActivity>
-        ) : (
-          <NoActivity>No activities...</NoActivity>
-        )
+            ))
+          ) : (
+            <NoActivity>No activities...</NoActivity>
+          )}
+        </TodayList>
       ) : (
         <Spinner />
       )}
