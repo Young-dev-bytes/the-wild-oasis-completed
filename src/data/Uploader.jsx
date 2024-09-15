@@ -7,6 +7,7 @@ import { subtractDates } from "../utils/helpers";
 import { bookings } from "./data-bookings";
 import { cabins } from "./data-cabins";
 import { guests } from "./data-guests";
+import { useDarkMode } from "../context/DarkModeProvider";
 
 // const originalSettings = {
 //   minBookingLength: 3,
@@ -102,6 +103,8 @@ async function createBookings() {
 
 function Uploader() {
   const [isLoading, setIsLoading] = useState(false);
+  const { isDarkMode } = useDarkMode();
+  if (isDarkMode) return null;
 
   async function uploadAll() {
     setIsLoading(true);
