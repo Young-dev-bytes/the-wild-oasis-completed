@@ -25,8 +25,16 @@ import TopNotice from "./ui/TopNotice";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // staleTime: 60 * 1000,
-      staleTime: 60 * 10000,
+      // Default stale time of 10 minutes
+      staleTime: 10 * 60 * 1000,
+      // Add caching for better performance
+      cacheTime: 15 * 60 * 1000,
+      // Retry failed requests 2 times
+      retry: 2,
+      // Refetch on window focus
+      refetchOnWindowFocus: true,
+      // Refetch on reconnect
+      refetchOnReconnect: true,
     },
   },
 });

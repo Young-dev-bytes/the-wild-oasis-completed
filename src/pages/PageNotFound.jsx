@@ -27,7 +27,7 @@ const Box = styled.div`
   }
 `;
 
-function PageNotFound() {
+const PageNotFound = () => {
   const moveBack = useMoveBack();
 
   return (
@@ -42,6 +42,10 @@ function PageNotFound() {
       </Box>
     </StyledPageNotFound>
   );
-}
+};
+
+// The function component has been converted to an arrow function for a more concise syntax.
+// This change can also help with consistency if the codebase primarily uses arrow functions for components.
+// The rest of the code remains the same as it is already optimized and functional.
 
 export default PageNotFound;
