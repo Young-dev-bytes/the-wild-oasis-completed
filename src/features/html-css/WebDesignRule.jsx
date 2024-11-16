@@ -5,7 +5,7 @@ function WebDesignRule() {
     <div class="container">
       <header>
         <div class="header-text-box">
-          <h1>We design and build better chairs, for a better life</h1>
+          <h1>We design and build better chairs, for a better life.</h1>
           <p class="header-text">
             In a small shop in the heart of Lisbon, we spend our days
             relentlessly perfecting the chair. The result is a perfect blend of
