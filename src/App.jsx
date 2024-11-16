@@ -21,6 +21,7 @@ import Checkin from "./pages/Checkin";
 import TestCounter from "./test/TestCounter";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import TopNotice from "./ui/TopNotice";
+import WebDesignRule from "./features/html-css/WebDesignRule";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -71,6 +72,7 @@ function App() {
             <Route path="testhoc" element={<TestHOC />} />
             <Route path="testrenderprops" element={<TestRenderProps />} />
             <Route path="testcounter" element={<TestCounter />} />
+            <Route path="designrule" element={<WebDesignRule />} />
           </Routes>
         </BrowserRouter>
         <Toaster
