@@ -14,29 +14,9 @@ const StyledHeader = styled.header`
   justify-content: flex-end;
 `;
 
-const DesignRule = styled.div`
-  color: red;
-`;
-
-const StyledLink = styled.a`
-  color: var(--color-brand-600);
-  font-weight: 500;
-  text-align: center;
-  transition: 0.3s;
-  background: none;
-  border: none;
-  border-radius: var(--border-radius-sm);
-`;
-
 function Header() {
   return (
     <StyledHeader>
-      <DesignRule>
-        <StyledLink href="/designrule" target="_blank">
-          web design rules
-        </StyledLink>
-      </DesignRule>
-
       <UserAvatar />
       <HeaderMenu />
     </StyledHeader>
