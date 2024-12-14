@@ -28,7 +28,7 @@ function TopNotice() {
       <span>👏</span>
       <span>
         Young, You do the great job, completed all functions of the app. Keep
-        going. Also, this is my github repo, you check.{" "}
+        going. Also, this is my github repo, please check.{" "}
         <StyledLink href="https://github.com/Young-dev-bytes/" target="_blank">
           Young's repo
         </StyledLink>
