@@ -4,7 +4,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import TestRenderProps from "./test/TestRenderProps";
+import TestRenderProps from "./learning/TestRenderProps";
 import GlobalStyles from "./styles/GlobalStyles";
 import PageNotFound from "./pages/PageNotFound";
 import Dashboard from "./pages/Dashboard";
@@ -15,12 +15,13 @@ import Account from "./pages/Account";
 import Cabins from "./pages/Cabins";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
-import TestHOC from "./test/TestHOC";
+import TestHOC from "./learning/TestHOC";
 import Booking from "./pages/Booking";
 import Checkin from "./pages/Checkin";
-import TestCounter from "./test/TestCounter";
+import TestCounter from "./learning/TestCounter";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import TopNotice from "./ui/TopNotice";
+import Componts from "./learning/html-css/Componts";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -71,7 +72,7 @@ function App() {
             <Route path="testhoc" element={<TestHOC />} />
             <Route path="testrenderprops" element={<TestRenderProps />} />
             <Route path="testcounter" element={<TestCounter />} />
-            {/* <Route path="designrule" element={<WebDesignRule />} /> */}
+            <Route path="html-css-component" element={<Componts />} />
           </Routes>
         </BrowserRouter>
         <Toaster
