@@ -50,12 +50,12 @@ function App() {
           <Routes>
             <Route
               element={
-                // <ProtectedRoute>
-                <>
-                  <TopNotice />
-                  <AppLayout />
-                </>
-                // </ProtectedRoute>
+                <ProtectedRoute>
+                  <>
+                    <TopNotice />
+                    <AppLayout />
+                  </>
+                </ProtectedRoute>
               }
             >
               {/* <Route index element={<Dashboard />} /> */}
